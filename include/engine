@@ -1,0 +1,58 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+typedef void* window_t;
+typedef unsigned int* pixel_buffer_t;
+typedef unsigned int rgba_t;
+
+
+/*
+ * creates a new window of size [width] x [height] with text [title]
+ * returns:
+ *   -1: an error occurred
+ *    0: window created successfully
+ */
+int window_create(window_t *window, char* title, int width, int height);
+
+/*
+ * destroys a window
+ * returns:
+ *   -1: an error occurred
+ *    0: window destroyed successfully
+ */
+int window_destroy(window_t window);
+
+/*
+ * updates event queue for window
+ * returns:
+ *   -1: an error occurred
+ *    0: event queue updated successfully
+ */
+int window_update_events(window_t window);
+
+/*
+ * returns if quit event received.
+ * returns:
+ *   -1: an error occurred
+ *    0: quit event not received
+ *    1: quit event received
+ */
+int window_received_quit_event(window_t window);
+
+/*
+ * updates window buffer with contents of [buffer]
+ * returns:
+ *   -1: an error occurred
+ *    0: buffer update successful
+ */
+int window_update_buffer(window_t window, pixel_buffer_t buffer);
+
+int system_sleep( unsigned int milliseconds );
+
+//int pixel_buffer_create(pixel_buffer_t *buffer, int width, int height);
+//int pixel_buffer_destroy();
+
+//int draw_pixel(pixel_buffer_t buffer, int x, int y, rgba_t color);
+//int draw_line(pixel_buffer_t buffer, int x1, int y1, int x2, int y2, rgba_t color);
+//int draw_line_with_gradient(pixel_buffer_t buffer, int x1, int y1, int x2, int y2, rgba_t color1, rgba_t color2);

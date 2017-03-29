@@ -1,6 +1,0 @@
-#include <stdio.h>
-#include <string.h>
-
-typedef void* game_window;
-
-int window_create(char* title, int width, int height, game_window **window);
