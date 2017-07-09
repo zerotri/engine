@@ -110,7 +110,7 @@ int window_update_buffer(window_t window, pixel_buffer_t pixels) {
 		fprintf( stderr, "Could not unlock texture: %s\n", SDL_GetError() );
 		return -1;
 	}
-	memcpy( texture_pixels, pixels, pitch*window_p->width );
+	memcpy( texture_pixels, pixels, pitch*window_p->height );
     SDL_UnlockTexture( window_p->sdl_texture );
 
     SDL_RenderClear( window_p->sdl_renderer );
