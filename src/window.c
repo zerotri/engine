@@ -22,7 +22,7 @@ int window_create(window_t *window, char* title, int width, int height) {
 	}
 
 	window_p->width = width;
-	window_p->width = height;
+	window_p->height = height;
 	window_p->sdl_window = SDL_CreateWindow( title,
 								SDL_WINDOWPOS_UNDEFINED,
 								SDL_WINDOWPOS_UNDEFINED,
